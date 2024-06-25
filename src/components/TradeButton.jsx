@@ -28,9 +28,9 @@ const TradeButton = () => {
     };
 
     return (
-        <div>
-            {isLoading ? 'Loading...' : <button onClick={tradeHandler}>Trade</button>}
-            {isTradeClicked && <pre>{JSON.stringify(trade, null, 2)}</pre>}
+        <div className='w-full'>
+            {isLoading ? <p className='text-2xl	font-semibold'>Trading...</p> : <button className="btn mb-3 text-md text-white px-5 py-1 rounded bg-blue-700 hover:bg-blue-900 	" onClick={tradeHandler}>Trade</button>}
+            {isTradeClicked && <pre className='overflow-y-auto bg-slate-200 px-5 py-5 rounded'>{JSON.stringify(trade, null, 2)}</pre>}
         </div>
     );
 };
